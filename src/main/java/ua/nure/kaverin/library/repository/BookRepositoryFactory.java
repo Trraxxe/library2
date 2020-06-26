@@ -1,7 +1,7 @@
 package ua.nure.kaverin.library.repository;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import ua.nure.kaverin.library.repository.impl.BookRepositoryImpl;
+import ua.nure.kaverin.library.repository.mongo.MongoRepositoryImpl;
 
 public final class BookRepositoryFactory {
 
@@ -21,6 +21,6 @@ public final class BookRepositoryFactory {
     }
 
     public BookRepository getBookRepository() {
-        return new BookRepositoryImpl(jdbcTemplate);
+        return new MongoRepositoryImpl();
     }
 }

@@ -1,4 +1,4 @@
-package ua.nure.kaverin.library.repository.impl;
+package ua.nure.kaverin.library.repository.sql;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import ua.nure.kaverin.library.model.Book;
@@ -30,5 +30,10 @@ public class BookRepositoryImpl implements BookRepository {
             book.setBooksCount(rs.getInt("books_count"));
             return book;
         });
+    }
+
+    @Override
+    public void createBook(Book book) {
+
     }
 }

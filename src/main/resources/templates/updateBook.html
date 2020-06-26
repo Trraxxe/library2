@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Main page</title>
+    <meta http-equiv="Content-Type" content="text/html:charset=UTF-8">
+</head>
+<body>
+<form method="post" th:action="@{/books/{id}(id=${book.id})}">
+    Name:<input th:name="bookName" th:value="${book.bookName}">
+    Edition Name:<input th:name="editionName" th:value="${book.editionName}">
+    Edition Date:<input th:name="editionDate" th:type="date" th:value="${book.editionDate}">
+    Book count:<input th:name="booksCount" th:value="${book.booksCount}">
+    <input type="submit" value="Create">
+</form>
+</body>
+</html>

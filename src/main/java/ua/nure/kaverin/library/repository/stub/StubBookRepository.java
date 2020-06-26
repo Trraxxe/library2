@@ -1,4 +1,4 @@
-package ua.nure.kaverin.library.repository.impl;
+package ua.nure.kaverin.library.repository.stub;
 
 import ua.nure.kaverin.library.model.Book;
 import ua.nure.kaverin.library.repository.BookRepository;
@@ -11,5 +11,10 @@ public class StubBookRepository implements BookRepository {
     @Override
     public List<Book> getAllBooks() {
         return Arrays.asList(new Book(), new Book("1", "2", "3", new Date(1000000), 1));
+    }
+
+    @Override
+    public void createBook(Book book) {
+
     }
 }

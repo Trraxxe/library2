@@ -6,6 +6,7 @@
 </head>
 <body>
 <table>
+    <a href="/books/create">Create books page</a>
     <tr>
         <th>Book name</th>
         <th>Edition name</th>
@@ -17,6 +18,8 @@
         <td th:utext="${book.editionName}"></td>
         <td th:utext="${book.editionDate}"></td>
         <td th:utext="${book.booksCount}"></td>
+        <td><a th:href="@{/books/{id}(id=${book.id})}">Update</a></td>
+        <td><a th:href="@{/books/{id}/delete(id=${book.id})}">Delete</a></td>
     </tr>
 </table>
 </body>
